@@ -1,0 +1,42 @@
+Requirements = ( OpSysAndVer == "CentOS7" )
+# Request_GPUs = 1
+universe          = vanilla
+# Running in local mode with 4 cpu slots
+request_cpus      = 4 
+notification      = Error
+notify_user       = daniel.hundhausen@desy.de
+initialdir        = /nfs/dust/cms/user/hundhad/sgnl_production
+output            = condor_logs/$(MA)_$(MH).o$(ClusterId).$(Process)
+error             = condor_logs/$(MA)_$(MH).e$(ClusterId).$(Process)
+log               = condor_logs/$(MA)_$(MH).$(Cluster).log
+# Requesting CPU and DISK Memory - default +RequestRuntime of 3h stays unaltered
+# getenv            = True
+RequestMemory     = 8G
+RequestDisk       = 4G
++RequestRuntime   = 64800
+JobBatchName      = InvisibleProduction
+executable = /nfs/dust/cms/user/hundhad/sgnl_production/run_generation.sh
+arguments         = $(MA) $(MH) 100
+queue MA, MH from (1000, 800
+1000, 800
+1000, 800
+1000, 800
+1000, 800
+1000, 800
+1000, 800
+1000, 800
+1000, 800
+1000, 800
+1000, 800
+)
+
+# 48 h in seconds:  172800
+# Gridpack Masses:
+# 800, 400
+# 1000, 400
+# 1000, 850
+# 600, 400
+# 750, 400
+# 750, 650
+# 800, 400
+# 950, 400
