@@ -16,27 +16,16 @@ RequestDisk       = 4G
 +RequestRuntime   = 64800
 JobBatchName      = InvisibleProduction
 executable = /nfs/dust/cms/user/hundhad/sgnl_production/run_generation.sh
-arguments         = $(MA) $(MH) 100
-queue MA, MH from (1000, 800
-1000, 800
-1000, 800
-1000, 800
-1000, 800
-1000, 800
-1000, 800
-1000, 800
-1000, 800
-1000, 800
-1000, 800
-)
+arguments         =  800 400 400
+queue 60
+
 
 # 48 h in seconds:  172800
 # Gridpack Masses:
+# 1000, 400 -- 4.5k
+# 1000, 850 -- 2.2k
+# 600, 400 -- 10k
+# 750, 400 -- 25k
 # 800, 400
-# 1000, 400
-# 1000, 850
-# 600, 400
-# 750, 400
 # 750, 650
-# 800, 400
 # 950, 400
