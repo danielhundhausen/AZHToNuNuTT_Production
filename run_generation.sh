@@ -13,7 +13,7 @@ source /cvmfs/grid.desy.de/etc/profile.d/grid-ui-env.sh
 GRIDPACKS="/nfs/dust/cms/user/hundhad/gridpacks_inv/AZHToNuNutt_MA-<MA>_MH-<MH>_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz"
 BASEDIR=$(pwd)
 export X509_USER_PROXY=${BASEDIR}"/x509up_u36978"
-RUNDIR=${MA}_${MH}_$RANDOM
+RUNDIR=${MA}_${MH}_$RANDOM$RANDOM
 
 echo $X509_USER_PROXY
 voms-proxy-info || exit 1
