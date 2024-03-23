@@ -1,4 +1,4 @@
-# AZHToNuNuLLProduction
+# AZHToNuNuTTProduction
 
 So far this is only the setup for 2017. Depending on need, will extend to
 all years in future.
